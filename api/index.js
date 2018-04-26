@@ -1,11 +1,12 @@
-'use strict'
-const apiRouter = require('express').Router();
-const db = require('../db');
+const router = require('express').Router()
+module.exports = router
 
-// console.log("DB: ", db);
-// console.log("db.models ", db.models);
-// console.log("db.models.meal ", db.models.meal);
+router.use('/eightBalls', require('./eightBalls'))
+router.use('/responses', require('./responses'))
+router.use('/questions', require('./questions'))
 
-apiRouter.use('/meals', require('./meals'));
-
-module.exports = apiRouter;
+router.use((req, res, next) => {
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
+})

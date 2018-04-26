@@ -1,10 +1,11 @@
 {
-  "name": "meatpal-backend",
+  "name": "pragmatic-8-ball",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "seed": "node script/seed.js",
+    "start": "node index -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chalk": "^2.4.1",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
