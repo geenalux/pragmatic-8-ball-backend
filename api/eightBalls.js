@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 
 // GET a single eightBall by id
 router.get('/:eightBallId', (req, res, next) => {
-    EightBall.findById(req.params.eightBallId)
+    EightBall.findById(req.params.eightBallId, {include: [Response]})
     .then(eightBall => res.json(eightBall))
     .catch(next)
 })
