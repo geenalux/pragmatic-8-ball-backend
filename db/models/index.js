@@ -36,7 +36,7 @@ const Question = db.define('question', {
 EightBall.hasMany(Response)
 Response.belongsTo(EightBall)
 EightBall.hasMany(Question)
-Question.belongsTo(Question)
+Question.belongsTo(EightBall)
 
 Response.hasMany(Question)
 Question.belongsTo(Response)
