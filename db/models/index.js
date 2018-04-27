@@ -20,7 +20,7 @@ const Response = db.define('response', {
         validate: {
             notEmpty: true
         }
-    },
+    }
 })
 
 const Question = db.define('question', {
@@ -31,6 +31,13 @@ const Question = db.define('question', {
             notEmpty: true
         }
     },
+    responseContent: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
+    }
 })
 
 EightBall.hasMany(Response)
@@ -38,7 +45,7 @@ Response.belongsTo(EightBall)
 EightBall.hasMany(Question)
 Question.belongsTo(EightBall)
 
-Response.hasMany(Question)
-Question.belongsTo(Response)
+// Response.hasMany(Question)
+// Question.belongsTo(Response)
 
 module.exports = db
