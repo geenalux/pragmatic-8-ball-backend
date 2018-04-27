@@ -17,6 +17,7 @@
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "pg": "^7.4.1",
+    "react-native-material-dropdown": "^0.11.1",
     "sequelize": "^4.37.6",
     "volleyball": "^1.4.1"
   }

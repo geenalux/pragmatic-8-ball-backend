@@ -34,6 +34,9 @@ async function seed() {
     }),
     EightBall.create({
       name: 'Who will'
+    }),
+    EightBall.create({
+      name: 'Classic 8 Ball Mode'
     })
   ]);
 
@@ -214,7 +217,87 @@ async function seed() {
     Response.create({
           content: 'Casey Chan',
           eightBallId: 4
-    })
+    }),
+    Response.create({
+      content: 'It is certain',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'It is decidedly so',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Without a doubt',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Yes definitely',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'You may rely on it',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'As I see it, yes',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Most likely',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Outlook good',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Yes',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Signs point to yes',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Reply hazy try again',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Ask again later',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Better not tell you now',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Cannot predict now',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Concentrate and ask again',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Don\'t count on it',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'My reply is no',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'My sources say no',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Outlook not so good',
+      eightBallId: 5
+    }),
+    Response.create({
+      content: 'Very doubtful',
+      eightBallId: 5
+})
   ]);
 
   console.log(`successfully seeded ${responses.length} responses`);
