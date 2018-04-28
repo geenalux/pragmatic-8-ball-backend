@@ -30,13 +30,16 @@ async function seed() {
       name: 'Should I'
     }),
     EightBall.create({
-      name: 'Where Should I'
+      name: 'Where should I'
     }),
     EightBall.create({
       name: 'Who will'
     }),
     EightBall.create({
       name: 'Classic 8 Ball Mode'
+    }),
+    EightBall.create({
+      name: 'Live Mode'
     })
   ]);
 

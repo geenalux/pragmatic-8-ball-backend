@@ -2,6 +2,7 @@ const router = require('express').Router()
 const db = require('../db');
 const EightBall = db.models.eightBall
 const Response = db.models.response
+const Question = db.models.question
 
 // GET all eight balls
 router.get('/', (req, res, next) => {
@@ -12,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 // GET a single eightBall by id
 router.get('/:eightBallId', (req, res, next) => {
-    EightBall.findById(req.params.eightBallId, {include: [Response]})
+    EightBall.findById(req.params.eightBallId, {include: [Response], include: [Question]})
     .then(eightBall => res.json(eightBall))
     .catch(next)
 })
