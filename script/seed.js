@@ -16,6 +16,7 @@ const EightBall = db.models.eightBall;
 const Question = db.models.question;
 const Response = db.models.response;
 const LiveResponse = db.models.liveResponse;
+const LiveQuestion = db.models.liveQuestion;
 
 async function seed() {
   await db.sync({ force: true });
@@ -306,16 +307,16 @@ async function seed() {
 
   console.log(`successfully seeded ${responses.length} responses`);
 
-  const questions = await Promise.all([
-    Question.create({
+  const liveQuestions = await Promise.all([
+    LiveQuestion.create({
       input: 'What\'s in a name?',
-      id: 51,
+      id: 1,
       responseContent: null,
       eightBallId: 6
     }),
-    Question.create({
+    LiveQuestion.create({
       input: 'What should I eat for lunch today?',
-      id: 52,
+      id: 2,
       responseContent: null,
       eightBallId: 6
     })
@@ -323,28 +324,28 @@ async function seed() {
 
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
-  console.log(`successfully seeded ${questions.length} questions`);
+  console.log(`successfully seeded ${liveQuestions.length} questions`);
 
   const liveResponses = await Promise.all([
     LiveResponse.create({
       content: 'A rose by any other name would smell as sweet.',
-      questionId: 51
+      liveQuestionId: 1
     }),
     LiveResponse.create({
       content: 'A nickname can be an indicator of personality traits.',
-      questionId: 51
+      liveQuestionId: 1
     }),
     LiveResponse.create({
       content: 'There\'s a great Halal food cart on the south side of Beaver between Marketfield and Broadway - food is delicious and only $5.',
-      questionId: 52
+      liveQuestionId: 2
     }),
     LiveResponse.create({
       content: 'Thai food obvi.',
-      questionId: 52
+      liveQuestionId: 2
     }),
     LiveResponse.create({
       content: 'Steak tartare, caviar, and champagne.',
-      questionId: 52
+      liveQuestionId: 2
     })
   ]);
   // Wowzers! We can even `await` on the right-hand side of the assignment operator

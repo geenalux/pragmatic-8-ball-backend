@@ -37,6 +37,20 @@ const Question = db.define('question', {
     }
 })
 
+const LiveQuestion = db.define('liveQuestion', {
+    input: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
+    },
+    responseContent: {
+        type: Sequelize.STRING,
+        allowNull: true
+    }
+})
+
 const LiveResponse = db.define('liveResponse', {
     content: {
         type: Sequelize.STRING,
@@ -48,7 +62,7 @@ Response.belongsTo(EightBall)
 EightBall.hasMany(Question)
 Question.belongsTo(EightBall)
 
-Question.hasMany(LiveResponse)
-LiveResponse.belongsTo(Question)
+LiveQuestion.hasMany(LiveResponse)
+LiveResponse.belongsTo(LiveQuestion)
 
 module.exports = db
