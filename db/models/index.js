@@ -32,11 +32,12 @@ const Question = db.define('question', {
         }
     },
     responseContent: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: true
     }
 })
 
-const LiveResponse = db.define('liveResponses', {
+const LiveResponse = db.define('liveResponse', {
     content: {
         type: Sequelize.STRING,
     }
