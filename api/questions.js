@@ -19,7 +19,6 @@ router.get('/:questionId', (req, res, next) => {
 
 // POST a new question
 router.post('/', (req, res, next) => {
-  console.log(req.body)
   Question.create(req.body)
   .then(question =>  res.status(201).json(question))
   .catch(next);
