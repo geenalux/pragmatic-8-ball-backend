@@ -14,7 +14,6 @@ router.get('/', (req, res, next) => {
 router.get('/:liveQuestionId', (req, res, next) => {
   LiveQuestion.findById(req.params.liveQuestionId, {include: [LiveResponse]})
   .then(liveQuestion => {
-    console.log(liveQuestion)
     res.json(liveQuestion)})
   .catch(next)
 })

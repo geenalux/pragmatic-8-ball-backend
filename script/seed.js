@@ -310,13 +310,13 @@ async function seed() {
   const liveQuestions = await Promise.all([
     LiveQuestion.create({
       input: 'What\'s in a name?',
-      id: 1,
+      id: 51,
       responseContent: null,
       eightBallId: 6
     }),
     LiveQuestion.create({
       input: 'What should I eat for lunch today?',
-      id: 2,
+      id: 52,
       responseContent: null,
       eightBallId: 6
     })
@@ -329,23 +329,23 @@ async function seed() {
   const liveResponses = await Promise.all([
     LiveResponse.create({
       content: 'A rose by any other name would smell as sweet.',
-      liveQuestionId: 1
+      liveQuestionId: 51
     }),
     LiveResponse.create({
       content: 'A nickname can be an indicator of personality traits.',
-      liveQuestionId: 1
+      liveQuestionId: 51
     }),
     LiveResponse.create({
       content: 'There\'s a great Halal food cart on the south side of Beaver between Marketfield and Broadway - food is delicious and only $5.',
-      liveQuestionId: 2
+      liveQuestionId: 52
     }),
     LiveResponse.create({
       content: 'Thai food obvi.',
-      liveQuestionId: 2
+      liveQuestionId: 52
     }),
     LiveResponse.create({
       content: 'Steak tartare, caviar, and champagne.',
-      liveQuestionId: 2
+      liveQuestionId: 52
     })
   ]);
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
