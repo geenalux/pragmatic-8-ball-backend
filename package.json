@@ -19,6 +19,7 @@
     "pg": "^7.4.1",
     "react-native-material-dropdown": "^0.11.1",
     "sequelize": "^4.37.6",
+    "socket.io": "^2.1.0",
     "volleyball": "^1.4.1"
   }
 }
